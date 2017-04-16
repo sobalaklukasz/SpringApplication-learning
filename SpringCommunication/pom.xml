@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--inherited groupId from parent-->
+    <!--<groupId>private</groupId>-->
+    <artifactId>sprintApplication</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <parent>
+        <groupId>private</groupId>
+        <artifactId>root</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!--parent defines versions-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <!--<version>4.3.6.Final</version>-->
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--This can be used as documentation for starting application-->
+    <!--Do not forget to build (mvn install) application first-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.example.Main</mainClass>
+                    <!--Program arguments-->
+                    <!--<arguments>-->
+                        <!--<argument>Example argument</argument>-->
+                    <!--</arguments>-->
+
+                    <!--VM options-->
+                    <systemProperties>
+                        <!--<systemProperty>-->
+                            <!--<key>log4j.configuration</key>-->
+                            <!--<value>file:/home/luksob/log4j.properties</value>-->
+                        <!--</systemProperty>-->
+                        <systemProperty>
+                            <key>file.encoding</key>
+                            <value>UTF8</value>
+                        </systemProperty>
+                        <!--<systemProperty>-->
+                            <!--<key>-->
+                                <!--spring.configuration.file-->
+                            <!--</key>-->
+                            <!--<value>-->
+                                <!--beans.xml-->
+                            <!--</value>-->
+                        <!--</systemProperty>-->
+                    </systemProperties>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
