@@ -1,7 +1,5 @@
 package com.example.model;
 
-import com.sun.istack.internal.NotNull;
-
 import javax.persistence.*;
 
 /**
