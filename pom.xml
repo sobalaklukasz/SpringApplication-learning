@@ -10,7 +10,9 @@
     <version>1.0.0</version>
 
     <modules>
+        <module>HibernateFun</module>
         <module>SpringCommunication</module>
+        <module>Java8Features</module>
     </modules>
 
     <!--Children can use those dependencies without defining version-->
@@ -36,6 +38,23 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>5.1.37</version>
             </dependency>
+            <!--aop-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>4.3.7.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>1.6.11</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>1.6.11</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
